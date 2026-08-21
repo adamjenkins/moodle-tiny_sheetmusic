@@ -1,0 +1,69 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
+}}
+{{!
+    @template tiny_sheetmusic/midihelp
+
+    What MIDI import can and cannot do.
+
+    A MIDI import is a guess and never a transcription, and RELATIONS.md section B3 rule 2
+    makes saying so a contract rather than a courtesy. The wording is the copy approved in
+    P0-FINDINGS-T3 section B5, which was written against measured behaviour of the quantiser.
+
+    Collapsed by default because it is long and most authors are typing ABC rather than
+    importing anything; tiny_sheetmusic/ui opens it the moment a MIDI file is chosen.
+
+    Classes required for JS:
+    * none
+
+    Data attributes required for JS:
+    * data-region="midihelp" - the disclosure the import path opens.
+
+    Context variables required for this template:
+    * none
+
+    Example context (json):
+    {
+    }
+}}
+<details class="tiny_sheetmusic-midihelp" data-region="midihelp">
+    <summary>{{#str}}midihelpsummary, tiny_sheetmusic{{/str}}</summary>
+    <div class="tiny_sheetmusic-midihelp-body">
+        <p>{{#str}}midihelpintro, tiny_sheetmusic{{/str}}</p>
+
+        <h6>{{#str}}midihelpreliable, tiny_sheetmusic{{/str}}</h6>
+        <ul>
+            <li>{{#str}}midihelpreliable1, tiny_sheetmusic{{/str}}</li>
+            <li>{{#str}}midihelpreliable2, tiny_sheetmusic{{/str}}</li>
+            <li>{{#str}}midihelpreliable3, tiny_sheetmusic{{/str}}</li>
+        </ul>
+
+        <h6>{{#str}}midihelpfix, tiny_sheetmusic{{/str}}</h6>
+        <ul>
+            <li>{{#str}}midihelpfix1, tiny_sheetmusic{{/str}}</li>
+            <li>{{#str}}midihelpfix2, tiny_sheetmusic{{/str}}</li>
+            <li>{{#str}}midihelpfix3, tiny_sheetmusic{{/str}}</li>
+            <li>{{#str}}midihelpfix4, tiny_sheetmusic{{/str}}</li>
+            <li>{{#str}}midihelpfix5, tiny_sheetmusic{{/str}}</li>
+        </ul>
+
+        <h6>{{#str}}midihelpnometre, tiny_sheetmusic{{/str}}</h6>
+        <p>{{#str}}midihelpnometrebody, tiny_sheetmusic{{/str}}</p>
+
+        <h6>{{#str}}midihelpgrid, tiny_sheetmusic{{/str}}</h6>
+        <p>{{#str}}midihelpgridbody, tiny_sheetmusic{{/str}}</p>
+    </div>
+</details>

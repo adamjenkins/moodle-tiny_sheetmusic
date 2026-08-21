@@ -1,0 +1,26 @@
+/* Sheet music authoring styles. */
+
+.tiny_sheetmusic-midihelp {
+    margin-bottom: 0.75rem;
+}
+
+.tiny_sheetmusic-midihelp > summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/*
+ * The limits of MIDI import run to several hundred words, which is the point of them: they
+ * are a contract (RELATIONS.md section B3 rule 2), not a tooltip. Capping the height keeps
+ * the editing surface on screen while they are open, instead of pushing it below the fold.
+ */
+.tiny_sheetmusic-midihelp-body {
+    max-height: 14rem;
+    overflow-y: auto;
+    padding: 0.5rem 0.25rem 0;
+}
+
+.tiny_sheetmusic-midihelp-body h6 {
+    margin-top: 0.75rem;
+    font-weight: bold;
+}

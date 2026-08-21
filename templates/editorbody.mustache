@@ -1,0 +1,50 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
+}}
+{{!
+    @template tiny_sheetmusic/editorbody
+
+    The body of the score dialogue.
+
+    Everything author-facing that the shared editing surface does not own: the warning that
+    scores authored here will not be engraved, the limits of MIDI import, and the empty
+    element the surface is rendered into. The surface itself comes from local_sheetmusic and
+    appends exactly one child to that element (RELATIONS.md section B1).
+
+    Classes required for JS:
+    * none
+
+    Data attributes required for JS:
+    * data-region="editor" - the container handed to local_sheetmusic/editor.
+    * data-region="midihelp" - see tiny_sheetmusic/midihelp.
+
+    Context variables required for this template:
+    * filteractive boolean - whether filter_sheetmusic will render scores in this context.
+
+    Example context (json):
+    {
+        "filteractive": false
+    }
+}}
+<div class="tiny_sheetmusic-body">
+    {{^filteractive}}
+        <div class="alert alert-warning" role="alert" data-region="filterwarning">
+            {{#str}}filterinactive, tiny_sheetmusic{{/str}}
+        </div>
+    {{/filteractive}}
+    {{> tiny_sheetmusic/midihelp }}
+    <div class="tiny_sheetmusic-editor" data-region="editor"></div>
+</div>

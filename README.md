@@ -35,10 +35,29 @@ away there.
 displayed as notation. The plugin checks whether the filter is active in the current context and
 says so when it is not.
 
+## What the dialogue does
+
+The dialogue is this plugin's; the editing surface inside it is `local_sheetmusic/editor`, the
+engine's public editing module. That split is deliberate — the modal, the buttons, the
+author-facing warnings and everything that touches the HTML field live here, and nothing that
+understands notation does.
+
+- **Insert.** Write ABC, watch it engrave as you type, press *Insert score*. What lands in the
+  field is a `<pre class="sheetmusic sheetmusic-abc">` holding the source as entity-encoded
+  text. A score that does not engrave cannot be inserted: the dialogue stays open and says why.
+- **Edit.** Click a score already in the field and the same dialogue reopens with its source.
+  Scores are found by the `sheetmusic` marker class alone, never by what the display filter
+  makes of them.
+- **Import.** ABC, MusicXML (`.xml`, `.musicxml`, `.mxl`) and MIDI. MIDI import is a *guess*
+  and is presented as one: the dialogue opens its limits, lists everything the import had to
+  assume, and gives you grid, time signature, key and transposition controls to correct it
+  before anything reaches your page.
+- **Export.** SVG, PNG, PDF and MIDI, from whatever is currently in the editor.
+
 ## Status
 
-Alpha. The toolbar button and its per-context gating are in place; the score editing surface
-itself is still being built.
+Alpha. Authoring, editing, import and export work. Point-and-click and keyboard note entry are
+a later phase; today the score is written as ABC source with a live preview beside it.
 
 ## Licence
 

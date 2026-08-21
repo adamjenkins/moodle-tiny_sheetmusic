@@ -1,0 +1,19 @@
+{
+  "name": "tiny_sheetmusic",
+  "private": true,
+  "type": "module",
+  "description": "Marks amd/src as ES modules and lets node resolve Moodle AMD module names in unit tests.",
+  "exports": {
+    "./commands": "./amd/src/commands.js",
+    "./common": "./amd/src/common.js",
+    "./configuration": "./amd/src/configuration.js",
+    "./markup": "./amd/src/markup.js",
+    "./modal": "./amd/src/modal.js",
+    "./options": "./amd/src/options.js",
+    "./plugin": "./amd/src/plugin.js",
+    "./ui": "./amd/src/ui.js"
+  },
+  "devDependencies": {
+    "jsdom": "^30.0.1"
+  }
+}
