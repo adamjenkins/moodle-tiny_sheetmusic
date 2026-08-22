@@ -33,6 +33,8 @@ Feature: Sheet music is authored in the text editor
     And I expand all toolbars for the "Page content" TinyMCE editor
     When I click on the "Sheet music" button for the "Page content" TinyMCE editor
     Then I should see "Insert sheet music"
+    # Notes is the default tab since phase 3, so the source textarea starts hidden.
+    And I click on "Source" "button" in the "Insert sheet music" "dialogue"
     And I set the field "ABC source" to multiline:
       """
       X:1
@@ -57,6 +59,7 @@ Feature: Sheet music is authored in the text editor
     Then the "Sheet music" button of the "Page content" TinyMCE editor has state "true"
     When I click on the "Sheet music" button for the "Page content" TinyMCE editor
     Then I should see "Edit sheet music"
+    And I click on "Source" "button" in the "Edit sheet music" "dialogue"
     And the field "ABC source" matches multiline:
       """
       X:1

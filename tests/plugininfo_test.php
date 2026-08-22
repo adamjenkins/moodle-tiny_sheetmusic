@@ -81,6 +81,14 @@ final class plugininfo_test extends \advanced_testcase {
     public function test_configuration_reports_the_filter_state(): void {
         $this->resetAfterTest();
 
+        // The probe detects filter_sheetmusic by formatting a known score block and seeing
+        // whether anything changed, so it can only be exercised where that filter is installed.
+        // It is a separate plugin and deliberately not a dependency of this one - the dependency
+        // runs the other way - so this is a test-time requirement, not a runtime one.
+        if (!array_key_exists('sheetmusic', \core_component::get_plugin_list('filter'))) {
+            $this->markTestSkipped('filter_sheetmusic is not installed, so the filter probe cannot be exercised');
+        }
+
         $course = $this->getDataGenerator()->create_course();
         $context = \context_course::instance($course->id);
 

@@ -82,12 +82,16 @@ jobs:
           sudo locale-gen en_AU.UTF-8
           echo "NVM_DIR=$HOME/.nvm" >> "$GITHUB_ENV"
 
-      - name: Queue the local_sheetmusic dependency
-        # version.php declares a hard dependency on local_sheetmusic, so the test site
-        # cannot be installed without it. add-plugin clones it into
-        # $HOME/moodle-plugin-ci-plugins, which the install step below reads with
-        # --extra-plugins.
-        run: moodle-plugin-ci add-plugin --branch main adamjenkins/moodle-local_sheetmusic
+      - name: Queue the sibling plugins
+        # local_sheetmusic is a hard dependency declared in version.php, so the test site cannot
+        # be installed without it. filter_sheetmusic is not a dependency and never will be - the
+        # dependency runs the other way - but plugininfo's filter probe can only be exercised
+        # where the filter is actually installed, so it is queued for the tests' benefit.
+        # add-plugin clones both into $HOME/moodle-plugin-ci-plugins, which the install step
+        # below reads with --extra-plugins.
+        run: |
+          moodle-plugin-ci add-plugin --branch main adamjenkins/moodle-local_sheetmusic
+          moodle-plugin-ci add-plugin --branch main adamjenkins/moodle-filter_sheetmusic
 
       - name: Install moodle-plugin-ci
         run: moodle-plugin-ci install --plugin ./plugin --extra-plugins "$HOME/moodle-plugin-ci-plugins" --db-host=127.0.0.1
