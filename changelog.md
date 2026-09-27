@@ -3,6 +3,15 @@
 All notable changes to `tiny_sheetmusic` are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Changed
+
+- Declare Moodle 5.3 support (`$plugin->supported = [405, 503]`).
+- The headings in the MIDI import help (`tiny_sheetmusic/midihelp`) are `<h3 class="h6">` instead
+  of `<h6>`, so the dialogue's content headings start at level 3 below its `<h2>` title, as the
+  Moodle 5.3 modal guidance asks. They render at the same size as before.
+
 ## [0.1.0] - 2026-08-22
 
 ### Added

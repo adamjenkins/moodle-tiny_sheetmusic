@@ -3,6 +3,12 @@
 All notable changes to `tiny_sheetmusic` are documented here.
 The full history is in [`changelog.md`](changelog.md).
 
+## Unreleased
+
+- Declare Moodle 5.3 support.
+- The headings in the MIDI import help now start at level 3 below the dialogue title, as Moodle 5.3
+  asks of modal content; they look the same as before.
+
 ## [0.1.0] - 2026-08-22
 
 Initial release. A TinyMCE subplugin adding a sheet music button to Moodle's editor: it opens the
