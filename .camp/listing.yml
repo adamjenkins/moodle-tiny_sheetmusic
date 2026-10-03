@@ -1,0 +1,23 @@
+# camp listing manifest — descriptive content for your plugin's page.
+# Edit freely and commit; camp ingests this file at each tagged release.
+# Schema: https://camp-registry.org/schema/listing.schema.json
+name: tiny_sheetmusic
+summary: 'A TinyMCE plugin for Moodle that lets teachers and students write, edit, import and export sheet music in the text editor.'
+description: |
+  Adds a toolbar button and Insert menu item that open a score editor with
+  point-and-click and keyboard note entry plus an ABC source tab with live
+  preview. Scores can be imported from ABC, MusicXML and MIDI (with the MIDI
+  guess shown for correction) and exported as SVG, PNG, PDF or MIDI. Access is
+  controlled per context by the tiny/sheetmusic:use capability. Requires
+  local_sheetmusic, and filter_sheetmusic to display the saved scores.
+labels:
+  # Required disclosure labels — pick all that apply (RFC §4.7):
+  #   fully-free | freemium | paid-service | external-account
+  #   donation-supported | commercial-support-available
+  - fully-free
+# screenshots:
+#   - path: .camp/screenshots/overview.png
+#     caption: Main view
+links:
+  docs: https://github.com/adamjenkins/moodle-tiny_sheetmusic#readme
+  issues: https://github.com/adamjenkins/moodle-tiny_sheetmusic/issues
