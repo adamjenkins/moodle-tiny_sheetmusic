@@ -3,7 +3,13 @@
 All notable changes to `tiny_sheetmusic` are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [0.1.1] - 2026-10-04
+
+### Added
+
+- `composer.json` (package `adamjenkins/moodle-tiny_sheetmusic`, type `moodle-tiny`), requiring
+  `moodle/moodle` `>=4.5 <5.4` and `adamjenkins/moodle-local_sheetmusic` `>=0.1 <1.0`, matching
+  `$plugin->supported` and the `local_sheetmusic` dependency in `version.php`.
 
 ### Changed
 

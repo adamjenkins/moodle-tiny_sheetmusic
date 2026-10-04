@@ -1,0 +1,11 @@
+{
+    "name": "adamjenkins/moodle-tiny_sheetmusic",
+    "description": "The sheet-music authoring plugin for Moodle's TinyMCE editor: a toolbar button and Insert menu item that open the local_sheetmusic score editor",
+    "type": "moodle-tiny",
+    "require": {
+        "moodle/moodle": ">=4.5 <5.4",
+        "moodle/composer-installer": "^1.0",
+        "adamjenkins/moodle-local_sheetmusic": ">=0.1 <1.0"
+    },
+    "license": "GPL-3.0-or-later"
+}
