@@ -3,10 +3,15 @@
 All notable changes to `tiny_sheetmusic` are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [0.1.2] - 2026-10-04
 
 ### Changed
 
+- Maturity is now Beta (`MATURITY_BETA`); it was Alpha.
+- composer.json requires `moodle/moodle` `^4.5 || ^5.0` instead of `>=4.5 <5.4`: the explicit
+  upper cap is dropped so later Moodle 5.x releases are not excluded.
+- CI tests `MOODLE_503_STABLE` (PHP 8.3–8.4, PostgreSQL 17, MariaDB 11.4) instead of Moodle
+  `main`, now that Moodle 5.3 is released.
 - README: playback is available in the editor's preview and on saved scores (it comes from
   local_sheetmusic); only MIDI-keyboard input and Braille output are still to come.
 

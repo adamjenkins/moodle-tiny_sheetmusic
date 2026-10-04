@@ -25,11 +25,11 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component    = 'tiny_sheetmusic';
-$plugin->version      = 2026100400;
+$plugin->version      = 2026100401;
 $plugin->requires     = 2024100700;
 $plugin->supported    = [405, 503];
-$plugin->maturity     = MATURITY_ALPHA;
-$plugin->release      = '0.1.1';
+$plugin->maturity     = MATURITY_BETA;
+$plugin->release      = '0.1.2';
 $plugin->dependencies = [
     'local_sheetmusic' => 2026082100,
 ];

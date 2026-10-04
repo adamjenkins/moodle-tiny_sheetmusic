@@ -3,16 +3,12 @@
 All notable changes to `tiny_sheetmusic` are documented here.
 The full history is in [`changelog.md`](changelog.md).
 
-## [Unreleased]
+## [0.1.2] - 2026-10-04
 
+- The plugin's maturity is now Beta (it was Alpha).
 - README: playback is available in the editor's preview and on saved scores (it comes from
   local_sheetmusic); only MIDI-keyboard input and Braille output are still to come.
-
-## [0.1.1] - 2026-10-04
-
-- Declare Moodle 5.3 support.
-- Add `composer.json`, so the plugin can be installed with Composer as
-  `adamjenkins/moodle-tiny_sheetmusic`. It requires `adamjenkins/moodle-local_sheetmusic` 0.1 or
-  later (below 1.0).
-- The headings in the MIDI import help now start at level 3 below the dialogue title, as Moodle 5.3
-  asks of modal content; they look the same as before.
+- composer.json now requires `moodle/moodle` `^4.5 || ^5.0` rather than `>=4.5 <5.4`, so later
+  Moodle 5.x releases are no longer excluded.
+- Continuous integration now tests against the released Moodle 5.3 (`MOODLE_503_STABLE`) instead
+  of Moodle's development branch.
