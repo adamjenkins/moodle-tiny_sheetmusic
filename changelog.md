@@ -3,6 +3,13 @@
 All notable changes to `tiny_sheetmusic` are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Changed
+
+- README: playback is available in the editor's preview and on saved scores (it comes from
+  local_sheetmusic); only MIDI-keyboard input and Braille output are still to come.
+
 ## [0.1.1] - 2026-10-04
 
 ### Added

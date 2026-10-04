@@ -58,7 +58,9 @@ understands notation does.
 
 Alpha. Authoring, editing, import and export work, as do point-and-click and keyboard note
 entry: the notes tab is the default, and the ABC source remains available on its own tab with a
-live preview. Playback, MIDI-keyboard input and Braille output are a later phase.
+live preview. The preview and saved scores can be played back, with a speed control (playback comes
+from `local_sheetmusic`, and a site administrator can turn it off there). MIDI-keyboard input and
+Braille output are a later phase.
 
 ## Design documents
 
