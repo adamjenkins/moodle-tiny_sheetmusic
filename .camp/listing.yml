@@ -15,9 +15,21 @@ labels:
   #   fully-free | freemium | paid-service | external-account
   #   donation-supported | commercial-support-available
   - fully-free
-# screenshots:
-#   - path: .camp/screenshots/overview.png
-#     caption: Main view
+screenshots:
+  - path: .camp/screenshots/01-toolbar-button.png
+    caption: 'A student answering an assignment: the Sheet music button in the editor toolbar.'
+  - path: .camp/screenshots/02-notes-entry.png
+    caption: 'The notes tab: notes typed onto the staff in G major, with the change announced below.'
+  - path: .camp/screenshots/03-source-preview.png
+    caption: 'The source tab: ABC notation with a live, playable preview.'
+  - path: .camp/screenshots/04-inserted-in-field.png
+    caption: The inserted score in the text field, stored as readable notation; the button lights up inside it.
+  - path: .camp/screenshots/05-edit-existing.png
+    caption: Clicking the score reopens it in the same dialogue to edit and update.
+  - path: .camp/screenshots/06-submitted-answer.png
+    caption: The submitted answer, engraved and playable on the assignment page.
+  - path: .camp/screenshots/07-midi-import.png
+    caption: 'MIDI import: what it can and cannot do, what was assumed, and controls to correct it.'
 links:
   docs: https://github.com/adamjenkins/moodle-tiny_sheetmusic#readme
   issues: https://github.com/adamjenkins/moodle-tiny_sheetmusic/issues
